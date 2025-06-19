@@ -8,3 +8,9 @@ where salary =
 			from dbo.employees0 as e2
 			where e1.department =e2.department )
 
+			select * from dbo.sales
+
+	select productid , sum(quantity) as tottalquantity , sum(revenue) as totalrevenue 
+	from dbo.sales 
+	group by productid 
+	having  sum(quantity) > 100 ;
